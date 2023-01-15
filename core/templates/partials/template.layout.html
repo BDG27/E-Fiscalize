@@ -16,7 +16,6 @@
 </head>
 <body>
 
-    {% include "partials/template.sidenav.html" %}
     
     {% block content %}
     {% endblock content %}
@@ -24,6 +23,9 @@
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
     <script src="https://kit.fontawesome.com/169ea3b67d.js" crossorigin="anonymous"></script>
+    <script src="/static/js/jquery-3.6.3.min.js"></script>
+    {% include "partials/template.sidenav.html" %}
+
     {% block script %}
     {% endblock script %}
 

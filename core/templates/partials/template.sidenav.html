@@ -1,3 +1,41 @@
+<div id="eSidenav-button">
+    <button 
+        class="btn btn-primary" 
+        onclick="openSideNav(this)" 
+        data-isopen="false"
+        id="eSidenav-button-bars"
+    >
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</div>
 <nav id="eSidenav">
-
+    <h4>nav</h4>
 </nav>
+
+<script>
+
+    $(document).on('click', '#eContainer', function(){
+        let sideNav = $('#eSidenav')
+        let button = $('#eSidenav-button-bars')
+        let isOpenSideNav = $('#eSidenav-button-bars').data('isopen')
+
+        if(isOpenSideNav){
+            sideNav.css('left', '-100%')
+            $(button).data('isopen', false)
+        }
+    })
+
+    function openSideNav(button){
+        let sideNav = $('#eSidenav')
+        let isOpenSideNav = $(button).data('isopen')
+    
+        if(isOpenSideNav){
+            sideNav.css('left', '-100%')
+            $(button).data('isopen', false)
+        } else {
+            sideNav.css('left', '0')
+            $(button).data('isopen', true)
+        }
+    }
+
+</script>
