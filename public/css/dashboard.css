@@ -12,7 +12,7 @@
 #eSidenav-button{
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 16vw;
     z-index: 991;
 }
 
@@ -22,9 +22,14 @@
     left: -100%;
     width: 70vw;
     height: 100vh;
-    background-color: #cccccc;
+    background-color: #fff;
     z-index: 990;
-    transition: left .4s ease-in;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.74);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.74);
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.74);
+    padding: 0 8px;
+    padding-top: 10px;
+    transition: .4s;
 }
 
 #eContainer{
