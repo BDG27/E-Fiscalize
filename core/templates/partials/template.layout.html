@@ -16,6 +16,8 @@
 </head>
 <body>
 
+    {% include "partials/template.nav.html" %}
+    {% include "partials/template.sidenav.html" %}
     
     {% block content %}
     {% endblock content %}
@@ -24,10 +26,36 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
     <script src="https://kit.fontawesome.com/169ea3b67d.js" crossorigin="anonymous"></script>
     <script src="/static/js/jquery-3.6.3.min.js"></script>
-    {% include "partials/template.sidenav.html" %}
 
     {% block script %}
     {% endblock script %}
+    <script>
+
+        $(document).on('click', '#eContainer', function(){
+            let sideNav = $('#eSidenav')
+            let button = $('#eNav-button-toggle')
+            let isOpenSideNav = $('#eNav-button-toggle').data('isopen')
+    
+            if(isOpenSideNav){
+                sideNav.css('left', '-100%')
+                $(button).data('isopen', false)
+            }
+        })
+    
+        function openSideNav(button){
+            let sideNav = $('#eSidenav')
+            let isOpenSideNav = $(button).data('isopen')
+        
+            if(isOpenSideNav){
+                sideNav.css('left', '-100%')
+                $(button).data('isopen', false)
+            } else {
+                sideNav.css('left', '0')
+                $(button).data('isopen', true)
+            }
+        }
+    
+    </script>
 
 </body>
 </html>

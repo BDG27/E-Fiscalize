@@ -1,43 +1,44 @@
-<div id="eSidenav-button">
-    <button 
-        class="btn btn-primary btn-lg btn-floating" 
-        onclick="openSideNav(this)" 
-        data-isopen="false"
-        id="eSidenav-button-bars"
-    >
-    <i class="fas fa-xmark"></i>
-    </button>
-</div>
 <nav id="eSidenav">
-    <div id="eSidenav-header">
-        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(23).jpg" alt="avatar" class="rounded-circle img-fluid mb-3" style="max-width: 50px;">
+    <div class="mt-4">
+        <div id="eSidenav-header" class="ps-3">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(23).jpg" alt="avatar"
+                class="rounded-circle img-fluid mb-3" style="max-width: 50px;">
+            <h4>
+                <span style="white-space: nowrap;">GG Metal</span>
+            </h4>
+            <p>contato@ggmetal.com.br</p>
+        </div>
+        <hr class="mb-0">
+    </div>
+    <div class="position-relative ps">
+        <ul class="eSidenav-menu">
+            <li class="eSidenav-menu-item">
+                <a href="" class="eSidenav-menu-link">
+                    <i class="fa-solid fa-envelope pe-3"></i> Inbox
+                </a>
+            </li>
+            <li class="eSidenav-menu-item">
+                <a href="" class="eSidenav-menu-link">
+                    <i class="fa-solid fa-paper-plane pe-3"></i> Outbox
+                </a>
+            </li>
+            <li class="eSidenav-menu-item">
+                <a href="" class="eSidenav-menu-link">
+                    <i class="fa-solid fa-address-book pe-3"></i> Contacts
+                </a>
+                <!-- <ul class="sidenav-collapse collapse" id="sidenav-collapse-1-0-0" style="">
+                    <li class="eSidenav-menu-item">
+                        <a class="sidenav-link ripple-surface" tabindex="1">Family</a>
+                    </li>
+                    <li class="eSidenav-menu-item">
+                        <a class="sidenav-link ripple-surface" href="/previews/mdb-ui-kit/sidenav/2.html"
+                            tabindex="1">Friends</a>
+                    </li>
+                    <li class="eSidenav-menu-item">
+                        <a class="sidenav-link ripple-surface active ripple-surface-dark" tabindex="1">Work</a>
+                    </li>
+                </ul> -->
+            </li>
+        </ul>
     </div>
 </nav>
-
-<script>
-
-    $(document).on('click', '#eContainer', function(){
-        let sideNav = $('#eSidenav')
-        let button = $('#eSidenav-button-bars')
-        let isOpenSideNav = $('#eSidenav-button-bars').data('isopen')
-
-        if(isOpenSideNav){
-            sideNav.css('left', '-100%')
-            $(button).data('isopen', false)
-        }
-    })
-
-    function openSideNav(button){
-        let sideNav = $('#eSidenav')
-        let isOpenSideNav = $(button).data('isopen')
-    
-        if(isOpenSideNav){
-            sideNav.css('left', '-100%')
-            $(button).data('isopen', false)
-        } else {
-            sideNav.css('left', '0')
-            $(button).data('isopen', true)
-        }
-    }
-
-</script>
