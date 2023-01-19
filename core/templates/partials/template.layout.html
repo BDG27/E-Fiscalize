@@ -49,13 +49,37 @@
             if(isOpenSideNav){
                 sideNav.css('left', '-100%')
                 $(button).data('isopen', false)
+                setTimeout(() => $(button).html('<i class="fa-solid fa-bars"></i>'), 150)
             } else {
                 sideNav.css('left', '0')
                 $(button).data('isopen', true)
+                setTimeout(() => $(button).html('<i class="fa-solid fa-xmark"></i>'), 300)
             }
         }
     
-    </script>
+        $('.eSidenav-menu-link-toggle').click(function(e){
+            let is_expanded = $(this).find('ul').attr('data-expanded')
+            let ul = $(this).find('ul')
+            let icon = $(this).find('a .eSidenav-menu-dropdown-icon')
+            if(is_expanded == 'true'){
+                ul.attr('style', '')
+                ul.attr('data-expanded', 'false')
+                icon.attr('style', 'transform: rotate(0deg);')
+                setTimeout(function() {
+                    ul.addClass('d-none')
+                    ul.removeClass('eSidenav-menu-collapsing')
+                }, 350)
+            } else {
+                ul.addClass('eSidenav-menu-collapsing')
+                ul.removeClass('d-none')
+                icon.attr('style', 'transform: rotate(180deg);')
+                setTimeout(function(){
+                    ul.css({'height': '96px'})
+                    ul.attr('data-expanded', 'true')
+                }, 25)
+            }
+        })
 
+    </script>
 </body>
 </html>

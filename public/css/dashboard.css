@@ -16,19 +16,20 @@ a{
 .eNav-button{
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    padding: 0 10px;
 }
 
 #eSidenav{
     position: absolute;
-    top: 55px;
+    top: 60.52px;
     left: -100%;
-    width: 70vw;
+    width: 80vw;
     height: 100vh;
     background-color: rgb(251, 251, 251);
     z-index: 990;
     padding-top: 10px;
-    transition: .4s;
+    transition: .3s cubic-bezier(0.99, -0.07, 0.38, 0.49);
 }
 
 .eSidenav-menu{
@@ -61,6 +62,37 @@ a{
 .eSidenav-menu-link:hover{
     color: #262626;
     background-color: rgb(38, 38, 38, .05);
+}
+
+.eSidenav-menu-dropdown-icon{
+    position: absolute;
+    right: 0;
+    margin-left: auto;
+    margin-right: 0.8rem;
+    transition: transform .3s;
+}
+
+.eSidenav-menu-collapse{
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.eSidenav-menu-collapsing{
+    -webkit-transition: height .35s ease;
+    -moz-transition: height .35s ease;
+    -ms-transition: height .35s ease;
+    -o-transition: height .35s ease;
+    transition: height .35s ease;
+}
+
+.eSidenav-menu-link-collapse{
+    font-size: .78rem;
+    height: 1.5rem;
+    padding-left: 3rem;
 }
 
 #eContainer{
