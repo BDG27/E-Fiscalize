@@ -39,6 +39,7 @@
             if(isOpenSideNav){
                 sideNav.css('left', '-100%')
                 $(button).data('isopen', false)
+                setTimeout(() => $(button).html('<i class="fa-solid fa-bars"></i>'), 120)
             }
         })
     
@@ -49,7 +50,7 @@
             if(isOpenSideNav){
                 sideNav.css('left', '-100%')
                 $(button).data('isopen', false)
-                setTimeout(() => $(button).html('<i class="fa-solid fa-bars"></i>'), 150)
+                setTimeout(() => $(button).html('<i class="fa-solid fa-bars"></i>'), 120)
             } else {
                 sideNav.css('left', '0')
                 $(button).data('isopen', true)
