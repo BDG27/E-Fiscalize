@@ -13,26 +13,35 @@ a{
     width: 100vw;
 }
 
-#eNav{
+.eNav{
+    width: 100vw;
+    height: 50px;
     background: rgb(0,131,147);
-    background: linear-gradient(90deg, rgba(0,131,147,1) 0%, rgba(0,191,114,1) 61%);
+    background: linear-gradient(90deg, #1e7871 0%, #119187 61%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .eNav-button{
     background: none;
     border: none;
-    font-size: 1.7rem;
+    font-size: 30px;
     padding: 0 10px;
     color: white;
+    margin-left: 1.5rem;
 }
 
 #eSidenav{
     position: absolute;
-    top: 60.52px;
+    top: 50px;
     left: -100%;
     width: 80vw;
     height: 100vh;
-    background-color: rgb(251, 251, 251);
+    background-color: #f7f7f7;
     z-index: 990;
     padding-top: 10px;
     transition: .35s cubic-bezier(0.99, -0.07, 0.04, 0.61);
